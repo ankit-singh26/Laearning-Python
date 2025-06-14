@@ -19,4 +19,28 @@ arr = np.array([5, 10, 15, 20, 25])
 print("Average=", np.mean(arr))
 print("Multiply=", arr * 2)
 
+def get_matrix(n):
+    print(f"Enter {n} (comma-separated rows):")
+    rows = input().split(';')
+    matrix = [list(map(int, row.split(','))) for row in rows]
+    return np.array(matrix)
+
+try:
+    A = get_matrix("Matrix A")
+    B = get_matrix("Matrix B")
+
+    print("\nMatrix A:\n", A)
+    print("Matrix B:\n", B)
+
+    print("\nA + B =\n", A + B)
+    print("\nA - B =\n", A - B)
+    print("\nA * B (element-wise) =\n", A * B)
+    print("\nA @ B (matrix multiplication) =\n", A @ B)
+
+except ValueError as e:
+    print("Invalid input:", e)
+except Exception as e:
+    print("Error:", e)
+
+
 
