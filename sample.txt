@@ -1,3 +1,0 @@
-Hello, this is Day 3!
-Python is awesome.
-This is a new line.
